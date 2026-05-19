@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../services/api";
+import ThemeToggle from "../components/ThemeToggle";
 import "../styles/Chat.css";
 
 const Chat = () => {
@@ -134,6 +135,7 @@ const Chat = () => {
                 🗑️ Clear History
               </button>
             )}
+            <ThemeToggle />
             <button className="chat-back-btn" onClick={() => navigate("/dashboard")}>
               ← Back to Dashboard
             </button>

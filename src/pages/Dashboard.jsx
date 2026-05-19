@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ThemeToggle from "../components/ThemeToggle";
 import "../styles/Dashboard.css";
 
 const Dashboard = () => {
@@ -31,21 +32,28 @@ const Dashboard = () => {
       title: "Diet Plan",
       description: "Get personalized AI-powered meal plans based on your BMI and health goals",
       path: "/diet",
-      color: "#4caf50"
+      color: "#10b981"
     },
     {
       icon: "🔄",
       title: "Meal Swap",
       description: "Had something unhealthy? Get adjusted meal recommendations for the rest of your day",
       path: "/meal-swap",
-      color: "#ff9800"
+      color: "#0d9488"
     },
     {
       icon: "💬",
       title: "AI Coach",
       description: "Chat with your personal fitness assistant anytime, anywhere",
       path: "/chat",
-      color: "#2196f3"
+      color: "#6366f1"
+    },
+    {
+      icon: "🏋️",
+      title: "Workout Tracker",
+      description: "Log workouts, track weekly progress, and get AI-powered 7-day fitness plans",
+      path: "/workout",
+      color: "#f59e0b"
     }
   ];
 
@@ -59,7 +67,8 @@ const Dashboard = () => {
           </h1>
           <div className="dashboard-user-section">
             <span className="dashboard-welcome-text">Welcome, {userName}!</span>
-            <button 
+            <ThemeToggle />
+            <button
               className="dashboard-profile-btn"
               onClick={() => navigate("/profile")}
             >
@@ -78,7 +87,7 @@ const Dashboard = () => {
         <div className="dashboard-hero">
           <h2 className="dashboard-hero-title">Your AI-Powered Fitness Journey</h2>
           <p className="dashboard-hero-subtitle">
-            Personalized diet plans, expert coaching, and progress tracking - all in one place. 
+            Personalized diet plans, expert coaching, and progress tracking - all in one place.
             Start your transformation today with SwasthAI's intelligent fitness ecosystem.
           </p>
         </div>
@@ -111,8 +120,8 @@ const Dashboard = () => {
         <div className="dashboard-info-section">
           <h3 className="dashboard-info-title">🎯 Why Choose SwasthAI?</h3>
           <p className="dashboard-info-text">
-            Our AI-powered platform combines cutting-edge technology with personalized health insights. 
-            Whether you're looking to lose weight, gain muscle, or maintain a healthy lifestyle, 
+            Our AI-powered platform combines cutting-edge technology with personalized health insights.
+            Whether you're looking to lose weight, gain muscle, or maintain a healthy lifestyle,
             SwasthAI adapts to your unique needs and guides you every step of the way.
           </p>
         </div>
@@ -134,6 +143,7 @@ const Dashboard = () => {
               <li onClick={() => navigate("/diet")}>Diet Plan</li>
               <li onClick={() => navigate("/meal-swap")}>Meal Swap</li>
               <li onClick={() => navigate("/chat")}>AI Coach</li>
+              <li onClick={() => navigate("/workout")}>Workout Tracker</li>
               <li onClick={() => navigate("/profile")}>My Profile</li>
             </ul>
           </div>
@@ -144,6 +154,7 @@ const Dashboard = () => {
               <li>🥗 Personalized Meal Plans</li>
               <li>💬 24/7 AI Assistance</li>
               <li>📊 BMI Tracking</li>
+              <li>🏋️ Workout Tracking</li>
             </ul>
           </div>
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../services/api";
+import ThemeToggle from "../components/ThemeToggle";
 import "../styles/Profile.css";
 
 const Profile = () => {
@@ -174,6 +175,7 @@ const Profile = () => {
           <h1 className="profile-logo" onClick={() => navigate("/dashboard")}>
             💪 SwasthAI
           </h1>
+          <ThemeToggle />
           <button className="profile-back-btn" onClick={() => navigate("/dashboard")}>
             ← Back to Dashboard
           </button>

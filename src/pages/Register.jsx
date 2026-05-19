@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../services/api";
+import ThemeToggle from "../components/ThemeToggle";
 import "../styles/Auth.css";
 
 const Register = () => {
@@ -87,6 +88,7 @@ const Register = () => {
 
   return (
     <div className="auth-page">
+      <ThemeToggle floating={true} />
       <div className="auth-container">
         {/* Left Side - Branding */}
         <div className="auth-left">

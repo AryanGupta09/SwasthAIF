@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../services/api";
+import ThemeToggle from "../components/ThemeToggle";
 import "../styles/MealSwap.css";
 
 const MealSwap = () => {
@@ -110,6 +111,7 @@ const MealSwap = () => {
           <h1 className="meal-swap-logo" onClick={() => navigate("/dashboard")}>
             💪 SwasthAI
           </h1>
+          <ThemeToggle />
           <button className="meal-swap-back-btn" onClick={() => navigate("/dashboard")}>
             ← Back to Dashboard
           </button>

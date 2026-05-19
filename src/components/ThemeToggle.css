@@ -1,0 +1,49 @@
+.theme-toggle-inline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+.theme-toggle-inline:hover {
+  background: var(--accent-gradient);
+  color: white;
+  border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16,185,129,0.25);
+}
+.theme-toggle-floating {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(16,185,129,0.4);
+  transition: all 0.2s ease;
+}
+.theme-toggle-floating:hover {
+  transform: scale(1.12) rotate(15deg);
+  box-shadow: 0 8px 28px rgba(16,185,129,0.5);
+}
+.theme-toggle-icon { font-size: 16px; line-height: 1; }
+.theme-toggle-floating .theme-toggle-icon { font-size: 20px; }
+.theme-toggle-label { font-size: 12px; font-weight: 700; }
